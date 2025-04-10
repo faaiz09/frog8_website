@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -7,7 +7,6 @@ module.exports = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -51,6 +50,28 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Frog8 custom colors - Updated to green theme
+        frog8: {
+          primary: {
+            DEFAULT: '#22c55e', // Green
+            light: '#4ade80',
+            dark: '#16a34a',
+          },
+          secondary: {
+            DEFAULT: '#15803d', // Darker Green
+            light: '#22c55e',
+            dark: '#166534',
+          },
+          accent: {
+            DEFAULT: '#86efac', // Light Green
+            light: '#bbf7d0',
+            dark: '#4ade80',
+          },
+          background: {
+            DEFAULT: '#ffffff',
+            dark: '#0f172a',
+          },
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -59,17 +80,34 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
+          from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: 0 },
+        },
+        // Frog8 custom animations
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        "slide-down": {
+          "0%": { transform: "translateY(-20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Frog8 custom animations
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-up": "slide-up 0.5s ease-out",
+        "slide-down": "slide-down 0.5s ease-out",
       },
     },
   },
