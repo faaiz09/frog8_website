@@ -76,43 +76,23 @@ const TeamMember = ({
 const FounderTeamSection = () => {
   const teamMembers: TeamMemberProps[] = [
     {
-      name: "Rahul Sharma",
-      title: "CEO & Co-Founder",
-      bio: "Ex-Paytm, IIT Delhi. 10+ years in fintech and transit solutions. Led multiple successful payment infrastructure projects.",
+      name: "Vinayak Prasad",
+      title: "Founder & Director",
+      bio: "Vinayak, until recently was the CEO and MD of Forbes Technosys a leading provider of self-service automation and FINTECH based solutions. He is a payment expert with nearly 25 years in Financial Services & Fintech domains. His experience spans emerging and mature markets.",
       image:
-        "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&q=80",
+        "/team/vinayak_prasad.jpg",
       linkedin: "#",
       twitter: "#",
-      email: "rahul@frog8.com",
+      email: "vinayak@frog8.com",
     },
     {
-      name: "Priya Patel",
-      title: "CTO & Co-Founder",
-      bio: "Ex-Google, IIT Bombay. Expert in scalable payment systems and transit tech. Led engineering teams at multiple startups.",
+      name: "Sunil Kulkarni",
+      title: "Director",
+      bio: "Sunil has 35 years of cross-industry experience in technology-led businesses. In his last assignment, he was the Joint Managing Director for Oxigen Services, a Financial Inclusion, Mobile Wallet & Retail Payment Solution company he helped build over 15 years.",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+        "/team/sunil_kulkarni.jpg",
       linkedin: "#",
-      twitter: "#",
-      email: "priya@frog8.com",
-    },
-    {
-      name: "Vikram Mehta",
-      title: "COO",
-      bio: "Ex-BMRCL, IIM Ahmedabad. Deep expertise in transit operations and public-private partnerships in the transportation sector.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-      linkedin: "#",
-      email: "vikram@frog8.com",
-    },
-    {
-      name: "Ananya Singh",
-      title: "Head of Product",
-      bio: "Ex-PhonePe, IIIT Hyderabad. Specializes in UX design for fintech products with focus on accessibility and user adoption.",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
-      linkedin: "#",
-      twitter: "#",
-      email: "ananya@frog8.com",
+      email: "sunil@frog8.com",
     },
   ];
 
@@ -126,15 +106,14 @@ const FounderTeamSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet the Team</h2>
           <div className="w-20 h-1 bg-green-500 mx-auto mb-4"></div>
           <p className="text-lg max-w-2xl mx-auto text-muted-foreground">
-            Meet the visionaries behind Frog8's revolutionary transit payment
-            solutions
+            The leadership behind Frog8's innovative transit payment solutions
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
             <TeamMember key={index} {...member} />
           ))}
@@ -142,11 +121,10 @@ const FounderTeamSection = () => {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground mb-6">
-            Our team combines expertise from fintech, transit operations, and
-            technology to create India's most innovative transit payment
-            infrastructure.
+            Our leadership team combines decades of expertise in fintech, payment systems, 
+            and technology infrastructure to revolutionize transit payment solutions in India.
           </p>
-          <Button variant="outline">Meet the Full Team</Button>
+          <Button variant="outline">Contact Our Team</Button>
         </div>
       </div>
     </section>
